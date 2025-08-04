@@ -8,12 +8,12 @@
      
      TooDoo:
             1. TXpulsTrain test full buffer + looping - done.
-            2. Document return values (& review)
-            3. apply 'esp_err_t err =' to IDF func calls  where applicable.
+            2. Document function return values (& review)
+            3. Apply 'esp_err_t err =' to IDF func calls  where applicable.
             4. Fix/Test ChannelDelete
 
 
-Note: This program is NOT fully tested for SOC variants & IDF versions, expect some issues (& please feedback)
+Note: This program is NOT fully tested for SOC variants & IDF versions, expect some possible issues (& please feedback)
 
 */
 #pragma once
@@ -426,5 +426,6 @@ int B4RESP32RMTpuls::SYNC_ch(ArrayByte* tx_channels, byte numof_ch, bool SYNC_en
     With a group of sync channels, another channel sent before sync channels TX will be sync'd 
     Mitigate: Dont send non-sync channels after sync setup(or re-armed),
     sync will disarm after each sync group TX.
+
 
 */
